@@ -1,1 +1,9 @@
-Solve Euler square problem using Evolutionary Algorithm and Particle Swarm Optimization
+Solve Euler square problem using Evolutionary Algorithm,Hill Climbing Algorithm and Particle Swarm Optimization
+Also do:
+Separate some specific validation tests will be performed and the results will be
+displayed - the average and standard deviation for the best solutions found by your
+algorithm after 1000 evaluations of the fitness function in 30 runs, with populations of 40
+individuals.
+A plot depicting the fitness variation during the validations.
+Implement a GUI
+
