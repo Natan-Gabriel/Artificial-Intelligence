@@ -1,0 +1,89 @@
+R1: dacă θ e cold şi ω e normal atunci v este medium
+θ=5
+ω=50
+Se determină gradul de apartenenţă a valorii θ (pe grafic) la mulţimea fuzzy cold. Pentru
+aceasta se are în vedere faptul că mulţimea fuzzy cold a variabilei unghiul de deviaţie este de formă
+triunghiulară, funcţia de apartenenţă fiind
+cu a = -5, b =5, c = 10, deci
+μCold(θ=5) = max{0, min{(5+5)/(5+5), 1, (10-5)/(10-5)}}=1
+
+Se determină gradul de apartenenţă a valorii w (pe grafic) la mulţimea fuzzy normal. Pentru
+aceasta se are în vedere faptul că mulţimea fuzzy normal a variabilei unghiul de deviaţie este de formă
+triunghiulară, funcţia de apartenenţă fiind
+cu a = 0, b =50, c = 100, deci
+μNormal(w=50)= max{0, min{(50-0)/(50-0), 1, (100-50)/(100-50)}}=max{0,1}=1
+
+Deci, aplicând operatorul de min (corespunzător legării premiselor regulii 1 prin AND) se obţine:
+μTimeMedium
+(v) = min{μCold,μNormal}=min{1,1} =1.
+
+Agregarea mulţimilor fuzzy obţinute prin aplicarea tuturor regulilor
+Defuzzificarea – prin determinarea centrului de greutate(Sugeno)
+ μCold(5)=1,restul sunt zero
+ μNromal(50)=1,restul sunt zero
+ rezultatul va fi  50*1=50
+
+
+
+
+
+R2: dacă θ e cold şi ω e normal atunci v este medium
+θ=20
+ω=0
+Se determină gradul de apartenenţă a valorii θ (pe grafic) la mulţimea fuzzy warm. Pentru
+aceasta se are în vedere faptul că mulţimea fuzzy warm a variabilei unghiul de deviaţie este de formă
+triunghiulară, funcţia de apartenenţă fiind
+cu a =15 b =20, c = 25, deci
+μWarm(θ=20) = max{0, min{(20-15)/(20-15), 1, (25-20)/(25-20}}=1
+
+Se determină gradul de apartenenţă a valorii w (pe grafic) la mulţimea short normal. Pentru
+aceasta se are în vedere faptul că mulţimea fuzzy short a variabilei unghiul de deviaţie este de formă
+triunghiulară, funcţia de apartenenţă fiind
+cu a = -1000, b =20, c = 5, deci
+μShort(w=20)= max{0, min{(20+1000)/(20+1000), 1, (5-20)/(5-20)}}=max{0,1}=1
+
+Deci, aplicând operatorul de min (corespunzător legării premiselor regulii 1 prin AND) se obţine:
+μTimeLong
+(v) = min{μWarm,μShort}=min{1,1} =1.
+
+Agregarea mulţimilor fuzzy obţinute prin aplicarea tuturor regulilor
+Defuzzificarea – prin determinarea centrului de greutate(Sugeno)
+ μWarm(20)=1,restul sunt zero
+ μShort(0)=1,restul sunt zero
+ rezultatul va fi  100*1=100
+
+
+
+
+Fuzzy Logic- truth functions takes values in [0,1]
+(instead of {True, False})
+
+
+Steps for constructing a fuzzy system:
+1.Define the inputs and the outputs – by an expert
+-Fuzzification of inputs and outputs
+2.Construct a base of rules – by an expert
+3.Evaluate the rules
+4.Aggregate the results
+5.Defuzzificate the result
+6.Interpret the result
+
+
+Sugeno model
+Main idea
+-consequence of rule: “output variable is a crisp function that depends on inputs”
+Example
+-If x is in A and y is in B then z is f(x,y)
+Typology (based on charactersitics of f(x,y))
+-Sugeno model of degree 0 -> if (f(x,y) = k – constant (membership function of the
+consequences are singleton – a fuzzy set whose membership functions have value 1
+for a single (unique) point of the universe and 0 for all other points)
+- Sugeno model of degree 1-> if f(x,y) = ax + by+c
+
+
+
+Sugeno  model - COA becomes a weighted average of m crisp
+values obtained by applying all m rules
+
+
+
